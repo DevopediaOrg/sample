@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	std::for_each(a, a_end, print<int>);
 	std::cout<<'\n';
 
-	quick_sort(a, a_end, pivot_random<int*>());
+	quick_sort(a, a_end);
 	
 	std::cout<<"a after qsort: ";
 	std::for_each(a, a_end, print<int>);
