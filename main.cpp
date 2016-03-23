@@ -13,6 +13,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+int xyz;
 	std::vector<std::string> v(10);
 	v[0]="Paris";
 	v[1]="London";
