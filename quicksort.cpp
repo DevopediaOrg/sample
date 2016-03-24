@@ -82,3 +82,6 @@ void dummyforInstantiation() // can't make this static: instantiated templates w
   std::vector<std::string>::iterator iter;
   quick_sort(iter, iter);
 }
+
+// This is the end of file comment
+
