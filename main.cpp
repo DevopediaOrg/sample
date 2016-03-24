@@ -11,13 +11,8 @@ using namespace std;
 
 #include "quicksort.h"
 
-
-// Adding a comment here
-// Another line of comment
-
 int main(int argc, char* argv[])
 {
-int xyz;
 	std::vector<std::string> v(10);
 	v[0]="Paris";
 	v[1]="London";
@@ -53,6 +48,5 @@ int xyz;
 	std::for_each(a, a_end, print<int>);
 	std::cout<<'\n';
 
-	// Zero indicated no error
 	return 0;
 }
