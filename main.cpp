@@ -52,5 +52,6 @@ int xyz;
 	std::for_each(a, a_end, print<int>);
 	std::cout<<'\n';
 
+	// Zero indicated no error
 	return 0;
 }
