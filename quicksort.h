@@ -28,4 +28,3 @@ template<typename T> void print(const T &data);
 
 #endif
 
-// Editing from Windows with git protocol: one more change
