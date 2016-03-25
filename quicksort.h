@@ -7,8 +7,6 @@ Retrieved from: http://en.literateprograms.org/Quicksort_(C_Plus_Plus)?oldid=109
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
-// Added this comment
-
 #include <iostream>
 #include <algorithm>	// std::swap()
 #include <vector>
@@ -27,7 +25,5 @@ template<typename IT, typename PF> void quick_sort(IT begin, IT end, PF pf);
 template<typename IT> void quick_sort(IT begin, IT end);
 
 template<typename T> void print(const T &data);
-
-// End of file:  a new comment
 
 #endif
