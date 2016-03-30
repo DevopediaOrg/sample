@@ -1,6 +1,7 @@
 
 // New comment at the start of file
 // Feature-a line 1
+// Feature-a line 2
 
 #include <vector>
 #include <list>
