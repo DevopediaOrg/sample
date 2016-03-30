@@ -6,6 +6,7 @@ Retrieved from: http://en.literateprograms.org/Quicksort_(C_Plus_Plus)?oldid=109
 
 // Adding comment at start of file
 // Feature-b line 1
+// Feature-b line 2
 
 #include <time.h>
 #include <iostream>
