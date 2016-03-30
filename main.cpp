@@ -13,6 +13,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 // Real feature-a line 1
+// Real feature-a line 2
 
 	std::vector<std::string> v(10);
 	v[0]="Paris";
