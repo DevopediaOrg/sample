@@ -12,6 +12,8 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+// Real feature-a line 1
+
 	std::vector<std::string> v(10);
 	v[0]="Paris";
 	v[1]="London";
