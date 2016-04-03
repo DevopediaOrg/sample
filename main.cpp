@@ -41,6 +41,7 @@ int main(int argc, char* argv[])
 	std::for_each(v.begin(), v.end(), print<std::string>);
 	std::cout<<'\n';
 
+	// data
 	int a[]={3,8,0,6,7,4,2,1,9,3,1,8,3,9,2,0,9};
 	int *a_end=a+sizeof a/sizeof(int);
 
