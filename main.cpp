@@ -12,6 +12,8 @@
 #include <iostream>
 #include <string>
 
+// Change A: clone 1
+
 // A new line
 using namespace std;
 
