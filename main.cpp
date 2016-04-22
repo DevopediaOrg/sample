@@ -13,6 +13,8 @@
 #include <string>
 
 // Change A: clone 1
+// Change C: clone 1
+
 
 // A new line
 using namespace std;
