@@ -2,6 +2,7 @@
 // New comment at the start of file
 // Filename: main.cpp
 // Author: abc
+// Change B: clone 0
 
 #include <vector>
 #include <list>
