@@ -2,3 +2,5 @@ Making changes
 in feature-a branch ...
 
 A newline
+
+a new line again
