@@ -1,2 +1,6 @@
+.vscode/
+*.o
 *.tmp
 myreadme.txt
+
+
