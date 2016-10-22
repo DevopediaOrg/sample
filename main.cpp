@@ -37,6 +37,7 @@ int main(int argc, char* argv[])
 	std::for_each(v.begin(), v.end(), print<std::string>);
 	std::cout<<'\n';
 
+	// A change done on GitHub
 	quick_sort(v.begin(), v.end());
 
 	std::cout<<"v after qsort: ";
