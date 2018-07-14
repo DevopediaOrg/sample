@@ -1,3 +1,5 @@
+Adding a new line in feature a branch
+
 Something new
 
 Adding some new lines
