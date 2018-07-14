@@ -1,4 +1,5 @@
-
+// This is a new commit line
+//
 // New comment at the start of file
 // Filename: main.cpp
 // Author: abc
