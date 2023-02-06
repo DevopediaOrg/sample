@@ -35,15 +35,16 @@ jobs:
           lsb_release -a
           echo "----------------------------------------------------------"
 
+      - name: Get tag name
+        run: |
+          git describe --tags ${{ github.sha }}
+
       - name: Set new env variables
         run: |
-          COMMIT_ID=$(git rev-parse --short $GITHUB_SHA)
-          echo COMMIT_ID=$COMMIT_ID >> $GITHUB_ENV
+          echo COMMIT_ID=$(git rev-parse --short $GITHUB_SHA) >> $GITHUB_ENV
           echo CURR_BR=${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
-          echo TAGNAME=$(git describe --tags $COMMIT_ID) >> $GITHUB_ENV
 
       - name: Access env variables
         run: |
-          echo $TAGNAME
           echo $COMMIT_ID
           echo $CURR_BR
