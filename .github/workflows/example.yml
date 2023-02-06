@@ -1,0 +1,39 @@
+name: Example
+
+on:
+  push:
+    branches: [ "dev", "rel-*" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-20.04
+    timeout-minutes: 10
+
+    steps:
+
+      - name: Inspect environment
+        run: |
+          echo "----------------------------------------------------------"
+          echo Event: ${{ github.event_name }}
+          echo Branch: ${{ github.ref }}
+          echo Repo: ${{ github.repository }}
+          echo Commit ID: ${{ github.sha }}
+          echo "----------------------------------------------------------"
+          echo Home dir: $HOME
+          echo Current dir: $(pwd)
+          echo "----------------------------------------------------------"
+          uname -a
+          lsb_release -a
+          echo "----------------------------------------------------------"
+          commmitid=$(git rev-parse --short "$GITHUB_SHA")
+          currbr=${GITHUB_REF#refs/heads/}
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Access env variables
+        run: |
+          echo $commitid
+          echo $currbr
