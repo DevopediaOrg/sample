@@ -35,16 +35,16 @@ jobs:
           lsb_release -a
           echo "----------------------------------------------------------"
 
-      - name: Get tag name
-        run: |
-          git fetch -q --tags origin
-          TAGNAME=$(git describe --always --tags ${{ github.sha }})
-          if [ -z "$TAGNAME" ]; then echo "No tag"; else echo "Tagname: $TAGNAME"; fi
-
       - name: Set new env variables
         run: |
           echo COMMIT_ID=$(git rev-parse --short $GITHUB_SHA) >> $GITHUB_ENV
           echo CURR_BR=${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
+
+      - name: Get tag name
+        run: |
+          git fetch -q --tags origin
+          TAGNAME=$(git describe --always --tags ${{ github.sha }})
+          if [ "$TAGNAME" -eq "$COMMIT_ID" ]; then echo "No tag"; else echo "Tagname: $TAGNAME"; fi
 
       - name: Access env variables
         run: |
