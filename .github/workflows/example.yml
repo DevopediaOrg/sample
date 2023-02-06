@@ -14,6 +14,9 @@ jobs:
 
     steps:
 
+      - name: Warm up
+        run: sleep 5s
+
       - name: Checkout repo
         uses: actions/checkout@v3
 
