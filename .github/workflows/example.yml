@@ -57,7 +57,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Pushing EMS Docker image to Docker Hub
+      - name: Searching Docker Hub for image
         run: |
-          docker search --format "{{.Name}}" resonous003
+          docker search --format "{{.Name}}" ems
           sleep 5s
