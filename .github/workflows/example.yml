@@ -59,7 +59,4 @@ jobs:
 
       - name: Pushing EMS Docker image to Docker Hub
         run: |
-          echo A
-          docker images --all docker.io/resonous003/ems
-          echo B
-          docker images --all
+          docker search --format "{{.Name}}" resonous003
