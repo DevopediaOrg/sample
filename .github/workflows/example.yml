@@ -27,11 +27,14 @@ jobs:
           uname -a
           lsb_release -a
           echo "----------------------------------------------------------"
-          commmitid=$(git rev-parse --short "$GITHUB_SHA")
-          currbr=${GITHUB_REF#refs/heads/}
 
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Set new env variables
+        run: |
+          commmitid=$(git rev-parse --short "$GITHUB_SHA")
+          currbr=${GITHUB_REF#refs/heads/}
 
       - name: Access env variables
         run: |
