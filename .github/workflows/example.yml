@@ -48,5 +48,6 @@ jobs:
 
       - name: Access env variables
         run: |
+          echo $TAGNAME
           echo $COMMIT_ID
           echo $CURR_BR
