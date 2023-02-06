@@ -35,19 +35,15 @@ jobs:
           lsb_release -a
           echo "----------------------------------------------------------"
 
-      - name: Get tag name
-        uses: olegtarasov/get-tag@v2.1.2
-        with:
-          tagRegex: "v[0-9]+\\.[0-9]+\\.[0-9]+"
-          tagRegexGroup: 0
-
       - name: Set new env variables
         run: |
-          echo COMMIT_ID=$(git rev-parse --short $GITHUB_SHA) >> $GITHUB_ENV
+          COMMIT_ID=$(git rev-parse --short $GITHUB_SHA)
+          echo COMMIT_ID=$COMMIT_ID >> $GITHUB_ENV
           echo CURR_BR=${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
+          echo TAGNAME=$(git describe --tags $COMMIT_ID) >> $GITHUB_ENV
 
       - name: Access env variables
         run: |
-          echo $GIT_TAG_NAME
+          echo $TAGNAME
           echo $COMMIT_ID
           echo $CURR_BR
