@@ -37,8 +37,8 @@ jobs:
 
       - name: Get tag name
         run: |
-          git fetch -q --always --tags origin
-          TAGNAME=$(git describe --tags ${{ github.sha }})
+          git fetch -q --tags origin
+          TAGNAME=$(git describe --always --tags ${{ github.sha }})
           if [ -z "$TAGNAME" ]; then echo "No tag"; else echo "Tagname: $TAGNAME"; fi
 
       - name: Set new env variables
