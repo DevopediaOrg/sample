@@ -40,3 +40,4 @@ jobs:
         run: |
           echo $commitid
           echo $currbr
+          sleep 5s
