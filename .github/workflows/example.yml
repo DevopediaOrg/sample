@@ -37,7 +37,7 @@ jobs:
 
       - name: Get tag name
         run: |
-          git fetch --tags origin
+          git fetch -q --depth=1 --tags origin
           git describe --tags ${{ github.sha }}
 
       - name: Set new env variables
