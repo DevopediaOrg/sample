@@ -60,3 +60,4 @@ jobs:
       - name: Pushing EMS Docker image to Docker Hub
         run: |
           docker search --format "{{.Name}}" resonous003
+          sleep 5s
