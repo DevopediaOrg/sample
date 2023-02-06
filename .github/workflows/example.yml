@@ -58,4 +58,8 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Pushing EMS Docker image to Docker Hub
-        run: docker images --all docker.io/resonous003/ems:latest
+        run: |
+          echo A
+          docker images --all docker.io/resonous003/ems
+          echo B
+          docker images --all
