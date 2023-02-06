@@ -44,7 +44,7 @@ jobs:
         run: |
           git fetch -q --tags origin
           TAGNAME=$(git describe --always --tags ${{ github.sha }})
-          if [ "$TAGNAME" -eq "$COMMIT_ID" ]; then echo "No tag"; else echo "Tagname: $TAGNAME"; fi
+          if [ "$TAGNAME" = "$COMMIT_ID" ]; then echo "No tag"; else echo "Tagname: $TAGNAME"; fi
 
       - name: Access env variables
         run: |
