@@ -60,5 +60,5 @@ jobs:
       - name: Searching Docker Hub for image
         run: |
           echo ${{ secrets.DOCKER_PWD }} | docker login --username resonous003 --password-stdin
-          docker search --format "{{.Name}}" resonous003
+          docker search --format "{{.Name}}" ems
           sleep 5s
