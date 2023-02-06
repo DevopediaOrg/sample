@@ -31,6 +31,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Get tag name
+        uses: olegtarasov/get-tag@v2.1.2
+        id: tagName
+        with:
+          tagRegex: "v[0-9]+\\.[0-9]+\\.[0-9]+\\"
+
       - name: Set new env variables
         run: |
           echo COMMIT_ID=$(git rev-parse --short $GITHUB_SHA) >> $GITHUB_ENV
@@ -38,6 +44,7 @@ jobs:
 
       - name: Access env variables
         run: |
+          echo $GIT_TAG_NAME
           echo $COMMIT_ID
           echo $CURR_BR
           envsubst < .env
