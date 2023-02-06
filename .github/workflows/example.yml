@@ -33,7 +33,7 @@ jobs:
 
       - name: Set new env variables
         run: |
-          echo commmitid=$(git rev-parse --short "$GITHUB_SHA") >> $GITHUB_ENV
+          echo commmitid=$(git rev-parse --short $GITHUB_SHA) >> $GITHUB_ENV
           echo currbr=${GITHUB_REF#refs/heads/} >> $GITHUB_ENV
 
       - name: Access env variables
