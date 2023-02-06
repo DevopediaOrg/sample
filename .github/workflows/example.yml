@@ -39,6 +39,7 @@ jobs:
         uses: olegtarasov/get-tag@v2.1.2
         with:
           tagRegex: "v[0-9]+\\.[0-9]+\\.[0-9]+"
+          tagRegexGroup: 0
 
       - name: Set new env variables
         run: |
