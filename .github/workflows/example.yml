@@ -23,6 +23,7 @@ jobs:
       - name: Demo of for loop
         run: |
           for x in ${{ env.SERVICES }}; do
+            echo $x
           done
 
       - name: Inspect environment
