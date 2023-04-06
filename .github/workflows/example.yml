@@ -12,10 +12,18 @@ jobs:
     environment: default
     timeout-minutes: 10
 
+    env:
+      SERVICES: aa bbb cccc
+
     steps:
 
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Demo of for loop
+        run: |
+          for x in ${{ env.SERVICES }}; do
+          done
 
       - name: Inspect environment
         run: |
