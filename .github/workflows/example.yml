@@ -13,6 +13,8 @@ jobs:
     timeout-minutes: 10
 
     env:
+      LOCALREGISTRY: 192.168.0.150:5000
+      REGISTRY: registry.digitalocean.com/abc
       SERVICES: aa bbb cccc
 
     steps:
@@ -22,8 +24,9 @@ jobs:
 
       - name: Demo of for loop
         run: |
-          for x in ${{ env.SERVICES }}; do
-            echo $x
+          for svc in ${{ env.SERVICES }}; do
+            echo docker tag ${{ env.LOCALREGISTRY }}/$svc ${{ env.REGISTRY }}/$svc
+            echo docker push ${{ env.REGISTRY }}/$svc
           done
 
       - name: Inspect environment
